@@ -1,0 +1,11 @@
+/*body	{
+  background:url("https://unsplash.it/1800/1000/?random") top right no-repeat;
+  background-attachment:fixed;
+  background-size: cover;
+ }*/
+
+.navbar {
+   background-color: transparent;
+   background: transparent;
+   border-color: transparent;
+}
