@@ -116,7 +116,7 @@ window.onload = function()
       ctx.stroke();
       ctx.fillStyle = 'white';
       ctx.font = "30px Arial";
-      ctx.fillText("You won! Click next to go to the next level",10,50);
+      ctx.fillText("You won!",10,50);
     }
   };
 
