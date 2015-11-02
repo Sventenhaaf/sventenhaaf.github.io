@@ -1577,6 +1577,7 @@
 			color: #4acaa8 !important;
 		}
 
+
 	strong, b {
 		color: #777;
 		font-weight: 700;
@@ -2081,11 +2082,14 @@
 				vertical-align: top;
 				width: 48%;
 			}
+			ul.feature-icons li span {
+				font-family: "Lato", sans-serif;
+			}
 
 				ul.feature-icons li:before {
 					-moz-osx-font-smoothing: grayscale;
 					-webkit-font-smoothing: antialiased;
-					font-family: FontAwesome;
+					/*font-family: FontAwesome;*/
 					font-style: normal;
 					font-weight: normal;
 					text-transform: none !important;
