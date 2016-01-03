@@ -181,7 +181,7 @@ function stopAnimation() {
   .attr("d", lineFunction(data))
     .attr("stroke", "blue")
     .attr("stroke-width", 2)
-    .attr("fill", "none")
+    // .attr("fill", "none")
     // .style("stroke-dasharray", "5, 15")
 
 
