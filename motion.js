@@ -80,11 +80,11 @@ var startSquare = controlPanel
 var startText = controlPanel
   .append("text")
   .attr("x", 300)
-  .attr("y", 10)
+  .attr("y", 35)
   .text( "START")
   .attr("font-family", "sans-serif")
   .attr("font-size", "20px")
-  .attr("fill", "red");
+  .attr("fill", "black");
 
 var stopSquare = controlPanel.append("rect")
   .attr("x", 500)
@@ -97,11 +97,11 @@ var stopSquare = controlPanel.append("rect")
 var stopText = controlPanel
   .append("text")
   .attr("x", 500)
-  .attr("y", 10)
+  .attr("y", 35)
   .text( "STOP")
   .attr("font-family", "sans-serif")
   .attr("font-size", "20px")
-  .attr("fill", "red");
+  .attr("fill", "black");
 
 var spring = svg.append("line")
   .attr("x1", totalWidth - offsetX)
