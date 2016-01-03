@@ -75,7 +75,9 @@ var startSquare = controlPanel
   .attr("height", 30)
   .attr("width", 100)
   .attr("onclick", "startAnimation()")
-  .style("fill", "#ccc")
+  .style("fill", "#ccc");
+
+var startText = controlPanel
   .append("text")
   .attr("x", 300)
   .attr("y", 10)
@@ -90,7 +92,9 @@ var stopSquare = controlPanel.append("rect")
   .attr("height", 30)
   .attr("width", 100)
   .attr("onclick", "stopAnimation()")
-  .style("fill", "#666")
+  .style("fill", "#666");
+
+var stopText = controlPanel
   .append("text")
   .attr("x", 500)
   .attr("y", 10)
