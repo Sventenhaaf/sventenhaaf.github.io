@@ -337,6 +337,10 @@ body {
 
 /*Drawing Line*/
 
+.hoverhand {
+  cursor: pointer;
+}
+
 .trig path,.trig circle,.trig line{
   stroke:steelblue;
   stroke-width:2px;

@@ -75,16 +75,18 @@ var startSquare = controlPanel
   .attr("height", 30)
   .attr("width", 100)
   .attr("onclick", "startAnimation()")
-  .style("fill", "#ccc");
+  .style("fill", "#ccc")
+  .attr("class", "hoverhand");
 
 var startText = controlPanel
   .append("text")
-  .attr("x", 300)
-  .attr("y", 35)
+  .attr("x", 310)
+  .attr("y", 30)
   .text( "START")
   .attr("font-family", "sans-serif")
   .attr("font-size", "20px")
-  .attr("fill", "black");
+  .attr("fill", "black")
+  .attr("class", "hoverhand");
 
 var stopSquare = controlPanel.append("rect")
   .attr("x", 500)
@@ -92,16 +94,18 @@ var stopSquare = controlPanel.append("rect")
   .attr("height", 30)
   .attr("width", 100)
   .attr("onclick", "stopAnimation()")
-  .style("fill", "#666");
+  .style("fill", "#666")
+  .attr("class", "hoverhand");
 
 var stopText = controlPanel
   .append("text")
-  .attr("x", 500)
-  .attr("y", 35)
+  .attr("x", 510)
+  .attr("y", 30)
   .text( "STOP")
   .attr("font-family", "sans-serif")
   .attr("font-size", "20px")
-  .attr("fill", "black");
+  .attr("fill", "black")
+  .attr("class", "hoverhand");
 
 var spring = svg.append("line")
   .attr("x1", totalWidth - offsetX)
