@@ -1,0 +1,107 @@
+/*GENERAL*/
+
+body {
+  margin: 0;
+  font-family: helvetica;
+  font-weight: 100;
+}
+
+/*NAVBAR*/
+
+#nav {
+	width: 100%;
+  height: 70px;
+	float: left;
+	margin: 0 0 1em 0;
+	padding: 0;
+	background-color: #fff;
+	border-bottom: 1px solid #ccc;  }
+#nav.article {
+  border: none;
+}
+#nav ul {
+	list-style: none;
+	margin: 0 auto;
+	padding: 0; }
+#nav li {
+	float: left;
+  height: 70px;}
+#nav li a {
+	display: block;
+  padding: 25px 25px 0 25px;
+	text-decoration: none;
+	color: #069;
+  height: 45px;
+ }
+#nav li:first-child a {
+}
+#nav li a:hover {
+  padding: 23px 25px 0 25px;
+  border-bottom: 2px solid #069;
+ }
+
+ /*CONTENT*/
+ .content {
+   width: 800px;
+   margin: auto;
+ }
+
+/*At one point, consider Adobe Garamond Pro.*/
+.content p {
+  font-family: Palatino, Georgia, serif;
+  letter-spacing: .03em;
+  color: #333;
+}
+
+ h1 {
+   font-weight: 400;
+   color: #036;
+ }
+
+ h2 {
+   font-size: 14px;
+   font-weight: 100;
+   text-align: right;
+   color: #001a4d;
+ }
+
+ h3 {
+   font-weight: 200;
+ }
+
+ h4 {
+   font-weight: 200;
+   font-style: italic;
+   font-size: .9em;
+ }
+
+ i {
+   float: right;
+   margin: 0 15px 0 0;
+   color: red;
+ }
+
+/*WATERFALL CHART*/
+#label.hidden {
+  display: none;
+}
+
+.rect:hover {
+  opacity: 0.7;
+}
+
+
+body svg{
+  font: 11px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
