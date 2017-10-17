@@ -79,3 +79,35 @@ d3.select("#section3")
   .delay(1450)
   .duration(500)
   .style("opacity", "1")
+
+
+
+var post = document.getElementById("post");
+post.addEventListener("click", e => {
+
+
+  var imgEl = post.childNodes[1];
+  console.log(imgEl.src)
+  if (imgEl.src.split("/postnieuw.gif").length !== 2) {
+    [3].forEach(n => {
+      post.childNodes[n].style.display = "none"
+    })
+    imgEl.src = "./img/postnieuw.gif";
+  } else {
+    console.log("hoi??");
+    [3].forEach(n => {
+      post.childNodes[n].style.display = "block"
+    })
+    imgEl.src = "./img/post.png";
+  }
+
+
+
+})
+
+
+
+
+
+
+///

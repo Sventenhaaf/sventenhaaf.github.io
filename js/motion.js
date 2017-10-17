@@ -1,12 +1,12 @@
 // Unit and system settings
-var excitation  = -1;    // initial excitation       [m]
-var velocity    = 0;    // initial velocity         [m/s]
-var mass        = 10;   // mass             [kg]
-var stiffness   = 390;   // spring stiffness [kg/s^2]
-var damping     = 10;    // system damping   [kg/s]
+var excitation  = -1;    // initial excitation        [m]
+var velocity    = 0;    // initial velocity           [m/s]
+var mass        = 10;   // mass                       [kg]
+var stiffness   = 390;   // spring stiffness          [kg/s^2]
+var damping     = 10;    // system damping            [kg/s]
 
 // External force settings
-var fMagnitude  = 0;   // Ext force Amplitude      [N]
+var fMagnitude  = 0;   // Ext force Amplitude         [N]
 var frequency   = 1.51;   // Ext force frequency      [Hz]
 
 // Representation settings
@@ -44,6 +44,53 @@ var svg = d3.select(".motion").append("svg")
     "justify-content" : "center",
     "border"          : "1px solid black"
   })
+///////////////////////////////////////////
+
+
+//Append a defs (for definition) element to your SVG
+var defs = svg.append("defs");
+
+//Append a radialGradient element to the defs and give it a unique id
+var radialGradient = defs.append("radialGradient")
+    .attr("id", "radial-gradient")
+    .attr("cx", "35%")    //The x-center of the gradient, same as a typical SVG circle
+    .attr("cy", "35%")    //The y-center of the gradient
+    .attr("r", "50%");   //The radius of the gradient, an offset of 100% ends where you've set this radius
+
+
+
+    //Add colors to make the gradient appear like a Sun
+    radialGradient.append("stop")
+        .attr("offset", "0%")
+        .attr("stop-color", "skyblue");
+    // radialGradient.append("stop")
+    //     .attr("offset", "50%")
+    //     .attr("stop-color", "#FFF845");
+    // radialGradient.append("stop")
+    //     .attr("offset", "90%")
+    //     .attr("stop-color", "#FFDA4E");
+    radialGradient.append("stop")
+        .attr("offset", "100%")
+        .attr("stop-color", "steelblue");
+
+    // //Apply to a circle by referencing its unique id in the fill style
+    // svg.append("circle")
+    //     .attr("r", 100)
+    //     .attr("cx", 200)
+    //     .attr("cy", 200)
+    //     .style("fill", "url(#radial-gradient)")
+    //     // .style("fill", "red")
+
+
+
+
+
+
+
+
+
+
+/////////////////////
 
 var controlPanel = d3.select(".controlPanel").append("svg")
   .attr("width", totalWidth)
@@ -118,12 +165,8 @@ var spring = svg.append("line")
   .attr("stroke", "rgb(255, 0, 0)")
   .attr("id", "spring")
 
-var circle = svg.append("circle")
-  .attr("cy", scale*excitation + ntrHeight)
-  .attr("cx", totalWidth - offsetX)
-  .attr("r", 20)
-  .attr("id", "ball")
-  .style("fill", "cornflowerblue");
+
+  // .style("fill", ".style("fill", "url(#radial-gradient)")");
 
 // Animation functions
 function startAnimation() {
@@ -191,7 +234,8 @@ function stopAnimation() {
   .attr("d", lineFunction(data))
     .attr("stroke", "blue")
     .attr("stroke-width", 2)
-    // .attr("fill", "none")
+    .style("stroke-dasharray", "4,4")
+    .style("fill", "none")
     // .style("stroke-dasharray", "5, 15")
 
 
@@ -234,6 +278,14 @@ function setNewColor() {
 }
 
 
+
+var circle = svg.append("circle")
+  .attr("cy", scale*excitation + ntrHeight)
+  .attr("cx", totalWidth - offsetX)
+  .attr("r", 20)
+  .attr("id", "ball")
+  .style("fill", "url(#radial-gradient)")
+  
 function animate() {
   var spring = document.getElementById("spring");
   var circle = document.getElementById("ball");

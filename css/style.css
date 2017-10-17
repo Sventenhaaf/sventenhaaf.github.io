@@ -136,12 +136,21 @@ header hr {
 header {
     position: absolute;
     top: 30%;
-    right: 58%;
+    right: 54%;
     margin-top: -100px;
     /*width: 240px;*/
     text-align: center;
     padding-top: 99px;
 }
+
+@media (max-width: 600) {
+
+      body {
+            background: yellow !important;
+       }
+
+}
+
 
 .title {
   opacity: 0;
@@ -228,8 +237,8 @@ width: 100%;
 
 #content {
     position: absolute;
-    left: 50%;
-    width: 50%;
+    left: 54%;
+    width: 46%;
     top: 18%;
     right: 58%;
 }

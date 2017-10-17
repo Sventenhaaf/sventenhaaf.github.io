@@ -194,8 +194,8 @@ function myGraph() {
 
         // Restart the force layout.
         force
-                .gravity(2.6)
-                .charge(-9300)
+                .gravity(0.6)
+                .charge(-1900)
                 // .friction(.1)
                 .linkDistance( function(d) { return d.value * 10 } )
                 .size([w, h])
