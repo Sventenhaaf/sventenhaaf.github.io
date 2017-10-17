@@ -1,0 +1,435 @@
+div.row > * {
+  padding: 0 30px 0 30px;
+}
+
+div.row > hr {
+  padding: 0;
+}
+
+
+/*MAIN CSS*/
+
+
+/**
+ * Tooltip Styles
+ */
+
+/* Add this attribute to the element that needs a tooltip */
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-bottom: 5px;
+  margin-left: -80px;
+  padding: 7px;
+  width: 260px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #000;
+  background-color: hsla(0, 0%, 20%, 0.9);
+  color: #fff;
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -5px;
+  width: 0;
+  border-top: 5px solid #000;
+  border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+
+
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+}
+
+body {
+  font-family: Delicious; src: url('Delicious-Roman.otf');
+}
+
+h1 {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+}
+
+h2 {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+}
+
+h3 {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 15.4px;
+  color: grey;
+}
+
+h3 a {
+  color: grey;
+}
+
+header {
+  max-width: 310px;
+}
+
+header hr {
+  margin: 0 50px 0 50px;
+  /*border-color: grey;*/
+}
+
+header {
+    position: absolute;
+    top: 30%;
+    right: 54%;
+    margin-top: -100px;
+    /*width: 240px;*/
+    text-align: center;
+    padding-top: 99px;
+}
+
+@media (max-width: 600) {
+
+      body {
+            background: yellow !important;
+       }
+
+}
+
+
+.title {
+  opacity: 0;
+  text-align: center;
+}
+
+.soc {
+  display: inline-block;
+  font-size: 0;
+  list-style: none;
+  margin: 0;
+  padding: 28px;
+  /*padding: 4.8rem;*/
+  text-align: center;
+}
+
+.soc li {
+  display: inline-block;
+  float: left;
+  background-color: #465D6D;
+  margin: 12px;
+  margin: 1.2rem;
+  border-radius: 3px;
+}
+
+.email:hover {
+  background-color: grey;
+  border-radius: 3px;
+}
+
+.github:hover {
+  background-color: #da8;
+  border-radius: 3px;
+}
+
+.linkedin:hover {
+  background-color: #1474B1;
+  border-radius: 3px;
+}
+
+path {
+  fill: white;
+}
+
+ul.soc {
+  display: inline-flex;
+  padding: 0;
+}
+
+.soc a, .soc svg {
+  display: inline-block;
+}
+
+.soc a {
+  position: relative;
+  height: 2rem;
+  width: 2rem;
+}
+
+.soc svg {
+height: 100%;
+width: 100%;
+}
+
+.soc em {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: -.75em;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.email:hover {
+
+}
+
+
+
+/*START OF CONTENT CSS*/
+
+#content {
+    position: absolute;
+    left: 54%;
+    width: 46%;
+    top: 18%;
+    right: 58%;
+}
+
+#section1, #section2, #section3 {
+  opacity: 0;
+}
+
+
+div {
+  position: relative;
+}
+div div { position: absolute; top: 0; left: 0; }
+
+.enter {
+  fill: cornflowerblue;
+}
+
+.update {
+  fill: #333;
+}
+
+.exit {
+  fill: brown;
+}
+
+
+/*ALGORITHMS*/
+
+#bubbledescription, #quicksortdescription {
+    position: absolute;
+    left: 50%;
+    width: 400px;
+    top: 10%;
+}
+
+
+.bubblesort {
+  width: 700px;
+}
+
+/*ARTISTS*/
+
+p.artistname {
+  font-size: 1.5em;
+  margin: 50px;
+}
+hr#artisthr {
+  margin: 0;
+}
+
+#name {
+  height: 174px;
+  text-align: center;
+  display: inline-block;
+}
+
+
+#biography {
+  height: 174px;
+  text-align: center;
+}
+
+#picture {
+  margin: auto;
+  padding: auto;
+  text-align: center;
+}
+
+img {
+  display: inline-block;
+  margin: auto;
+}
+
+.textClass {
+  fill: black;
+  color: black;
+}
+
+#artistinfo {
+  cursor: pointer;
+}
+
+section {
+  max-width:    960px;
+  margin: 0 auto;
+  display: block;
+}
+
+
+body {
+  font-family: arial;
+}
+
+.node {
+    fill: #ccf;
+    stroke: #fff;
+    stroke-width: 2px;
+}
+
+.link {
+    stroke: #777;
+    stroke-width: 2px;
+}
+
+/*Drawing Line*/
+
+.hoverhand {
+  cursor: pointer;
+}
+
+.trig path,.trig circle,.trig line{
+  stroke:steelblue;
+  stroke-width:2px;
+  fill:none
+}
+
+.trig .axis{
+  stroke:#999
+}
+
+.trig text{
+  fill:#444;
+  font-family:sans-serif;
+  font-size:22
+}
+
+#test {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 3;
+}
+
+/*copied*/
+
+
+svg {
+  font: 10px sans-serif;
+}
+
+path.line {
+  fill: none;
+  stroke: #666;
+  stroke-width: 1.5px;
+}
+
+path.area {
+  fill: #e7e7e7;
+}
+
+.axis {
+  shape-rendering: crispEdges;
+}
+
+.x.axis line {
+  stroke: #fff;
+}
+
+.x.axis .minor {
+  stroke-opacity: .5;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.y.axis line,
+.y.axis path {
+  fill: none;
+  stroke: #000;
+}
+
+.xAxis path,
+.xAxis line,
+.yAxis path,
+.yAxis line {
+    fill: none;
+    stroke: black;
+}
+
+.xAxis text,
+.yAxis text {
+    font-family: sans-serif;
+    font-size: 11px;
+}
+
+
+.tick line{
+    stroke: lightgrey;
+    opacity: 0.5;
+}
+/*.grid path {
+      stroke-width: 0;
+}*/
