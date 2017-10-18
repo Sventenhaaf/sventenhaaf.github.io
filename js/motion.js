@@ -285,7 +285,7 @@ var circle = svg.append("circle")
   .attr("r", 20)
   .attr("id", "ball")
   .style("fill", "url(#radial-gradient)")
-  
+
 function animate() {
   var spring = document.getElementById("spring");
   var circle = document.getElementById("ball");
