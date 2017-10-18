@@ -1,408 +1,182 @@
-/*MAIN CSS*/
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
 
+a {
+  text-decoration: none; /* no underline */
+}
 
-/**
- * Tooltip Styles
- */
-
-/* Add this attribute to the element that needs a tooltip */
-[data-tooltip] {
+.container {
   position: relative;
-  z-index: 2;
-  cursor: pointer;
+  overflow: hidden;
 }
 
-/* Hide the tooltip content by default */
-[data-tooltip]:before,
-[data-tooltip]:after {
-  visibility: hidden;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-  pointer-events: none;
-}
-
-/* Position tooltip above the element */
-[data-tooltip]:before {
-  position: absolute;
-  bottom: 150%;
-  left: 50%;
-  margin-bottom: 5px;
-  margin-left: -80px;
-  padding: 7px;
-  width: 260px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  background-color: #000;
-  background-color: hsla(0, 0%, 20%, 0.9);
-  color: #fff;
-  content: attr(data-tooltip);
-  text-align: center;
-  font-size: 14px;
-  line-height: 1.2;
-}
-
-/* Triangle hack to make tooltip look like a speech bubble */
-[data-tooltip]:after {
-  position: absolute;
-  bottom: 150%;
-  left: 50%;
-  margin-left: -5px;
-  width: 0;
-  border-top: 5px solid #000;
-  border-top: 5px solid hsla(0, 0%, 20%, 0.9);
-  border-right: 5px solid transparent;
-  border-left: 5px solid transparent;
-  content: " ";
-  font-size: 0;
-  line-height: 0;
-}
-
-/* Show tooltip content on hover */
-[data-tooltip]:hover:before,
-[data-tooltip]:hover:after {
-  visibility: visible;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-}
-
-body {
-  font-family: Delicious; src: url('Delicious-Roman.otf');
-}
-
-h1 {
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size: 24px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 500;
-	line-height: 26.4px;
-}
-
-h2 {
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size: 20px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 500;
-	line-height: 26.4px;
-}
-
-h3 {
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size: 16px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 400;
-	line-height: 15.4px;
-  color: grey;
-}
-
-h3 a {
-  color: grey;
-}
-
-header {
-
-  max-width: 600px;
-
-}
-
-header hr {
-  margin: 0 50px 0 50px;
-  /*border-color: grey;*/
-}
-
-header {
-    /*position: absolute;*/
-    /*top: 30%;*/
-    /*right: 54%;*/
-    /*margin-top: -100px;*/
-    /*width: 240px;*/
-    text-align: center;
-    padding-top: 99px;
-}
-
-.title {
-  opacity: 0;
-  text-align: center;
-}
-
-.soc {
-  display: inline-block;
-  font-size: 0;
-  list-style: none;
-  margin: 0;
-  padding: 28px;
-  /*padding: 4.8rem;*/
-  text-align: center;
-}
-
-.soc li {
-  display: inline-block;
-  float: left;
-  background-color: #465D6D;
-  margin: 12px;
-  margin: 1.2rem;
-  border-radius: 3px;
-}
-
-.email:hover {
-  background-color: grey;
-  border-radius: 3px;
-}
-
-.github:hover {
-  background-color: #da8;
-  border-radius: 3px;
-}
-
-.linkedin:hover {
-  background-color: #1474B1;
-  border-radius: 3px;
-}
-
-path {
-  fill: white;
-}
-
-ul.soc {
-  display: inline-flex;
-  padding: 0;
-}
-
-.soc a, .soc svg {
-  display: inline-block;
-}
-
-.soc a {
-  position: relative;
-  height: 2rem;
-  width: 2rem;
-}
-
-.soc svg {
-height: 100%;
-width: 100%;
-}
-
-.soc em {
-    font-size: 14px;
-    line-height: 1.5;
-    margin-top: -.75em;
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-
-.email:hover {
-
-}
-
-
-
-/*START OF CONTENT CSS*/
-
-#content {
-    position: absolute;
-    left: 54%;
-    width: 46%;
-    top: 18%;
-    right: 58%;
-}
-
-#section1, #section2, #section3 {
-  opacity: 0;
-}
-
-
-div {
-  position: relative;
-}
-div div { position: absolute; top: 0; left: 0; }
-
-.enter {
-  fill: cornflowerblue;
-}
-
-.update {
-  fill: #333;
-}
-
-.exit {
-  fill: brown;
-}
-
-
-/*ALGORITHMS*/
-
-#bubbledescription, #quicksortdescription {
-    position: absolute;
-    left: 50%;
-    width: 400px;
-    top: 10%;
-}
-
-
-.bubblesort {
-  width: 700px;
-}
-
-/*ARTISTS*/
-
-p.artistname {
-  font-size: 1.5em;
-  margin: 50px;
-}
-hr#artisthr {
-  margin: 0;
-}
-
-#name {
-  height: 174px;
-  text-align: center;
-  display: inline-block;
-}
-
-
-#biography {
-  height: 174px;
-  text-align: center;
-}
-
-#picture {
-  margin: auto;
-  padding: auto;
-  text-align: center;
-}
-
-img {
-  display: inline-block;
-  margin: auto;
-}
-
-.textClass {
-  fill: black;
-  color: black;
-}
-
-#artistinfo {
-  cursor: pointer;
-}
-
-section {
-  max-width:    960px;
-  margin: 0 auto;
+.bigpic {
   display: block;
+  width: 100%;
+  transition: .5s ease;
+  height: auto;
 }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #002C2A;
+}
+
+.container:hover .overlay {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.container:hover .bigpic {
+  width: 105%;
+}
+
+.text {
+  color: white;
+  font-size: 0.9em;
+  position: absolute;
+  margin: 10px 10%;
+  text-align: justify;
+  font-weight: 100;
+}
+.role {
+  text-align: left;
+  font-style: italic;
+}
+.h1text {
+  padding: 5px 5px;
+  color: white;
+  font-weight: 400;
+  font-size: 1.1em;
+  text-align: center;
+  margin-top:20px;
+}
+
 
 
 body {
-  font-family: arial;
+  font-family: helvetica;
 }
-
-.node {
-    fill: #ccf;
-    stroke: #fff;
-    stroke-width: 2px;
+.one {
+  grid-column: 1 / 5;
+  grid-row: 1;
+  text-align: center;
 }
-
-.link {
-    stroke: #777;
-    stroke-width: 2px;
+.one .br {
+  height: 0px;
 }
-
-/*Drawing Line*/
-
-.hoverhand {
-  cursor: pointer;
+.one hr {
+  max-width: 250px;
 }
-
-.trig path,.trig circle,.trig line{
-  stroke:steelblue;
-  stroke-width:2px;
-  fill:none
+.one h1 {
+  font-size: 1.4em;
+  font-weight: 400;
 }
-
-.trig .axis{
-  stroke:#999
+.one h3 {
+  font-size: 1em;
+  font-weight: 100;
+  color: grey;
 }
-
-.trig text{
-  fill:#444;
-  font-family:sans-serif;
-  font-size:22
+.one i {
+  margin: 10px;
 }
-
-#test {
-  fill: none;
-  stroke: steelblue;
-  stroke-width: 3;
+.one a {
+  color: rgb(70, 93, 109);
 }
-
-/*copied*/
-
-
-svg {
-  font: 10px sans-serif;
-}
-
-path.line {
-  fill: none;
-  stroke: #666;
-  stroke-width: 1.5px;
-}
-
-path.area {
-  fill: #e7e7e7;
-}
-
-.axis {
-  shape-rendering: crispEdges;
-}
-
-.x.axis line {
-  stroke: #fff;
-}
-
-.x.axis .minor {
-  stroke-opacity: .5;
-}
-
-.x.axis path {
-  display: none;
-}
-
-.y.axis line,
-.y.axis path {
-  fill: none;
-  stroke: #000;
-}
-
-.xAxis path,
-.xAxis line,
-.yAxis path,
-.yAxis line {
-    fill: none;
-    stroke: black;
-}
-
-.xAxis text,
-.yAxis text {
-    font-family: sans-serif;
-    font-size: 11px;
+.one a:hover {
+  color: rgb(254, 102, 16);
 }
 
 
-.tick line{
-    stroke: lightgrey;
-    opacity: 0.5;
+.two {
+  grid-column: 2 / 5;
+  grid-row: 2;
 }
-/*.grid path {
-      stroke-width: 0;
-}*/
+
+.two .mobileLeft {
+  /*padding-left: 3em;*/
+  float: left;
+  width: 40%;
+}
+.two .mobileRight {
+  float: left;
+  width: 50%
+}
+
+.two .mobileBox {
+  /*margin-left: 4em;*/
+}
+
+.two h1 {
+  /*margin: 10px;*/
+  font-size: 1em;
+  font-weight: 400;
+}
+.two h2 {
+  /*margin: 10px;*/
+  font-size: 0.8em;
+  font-weight: 100;
+  color: grey;
+}
+
+.two h2:hover {
+  color: black;
+  font-weight: 400;
+}
+
+
+.three {
+  grid-column: 1 / 5;
+  grid-row: 3;
+}
+.four {
+  grid-column: 1 / 5;
+  grid-row: 4;
+}
+
+.five {
+  grid-column: 1 / 5;
+  grid-row: 5;
+}
+.six {
+  grid-column: 1 / 5;
+  grid-row: 6;
+}
+.seven {
+  grid-column: 1 / 5;
+  grid-row: 7;
+}
+.eight {
+  grid-column: 1 / 5;
+  grid-row: 8;
+}
+
+.nine {
+  grid-column: 1 / 5;
+  grid-row: 9;
+}
+.ten {
+  grid-column: 1 / 5;
+  grid-row: 10;
+}
+.eleven {
+  grid-column: 1 / 5;
+  grid-row: 11;
+}
+.twelve {
+  grid-column: 1 / 5;
+  grid-row: 12;
+}
+.thirteen {
+  grid-column: 1 / 5;
+  grid-row: 13;
+}

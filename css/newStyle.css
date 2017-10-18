@@ -11,6 +11,13 @@ body {
   /*border: 1px solid tomato;*/
 }
 
+a {
+  text-decoration: none; /* no underline */
+}
+
+
+
+
 /*.wrapper div:hover {
   background-color: green;
   opacity: 0.2;
@@ -128,6 +135,11 @@ body {
   font-size: 1em;
   font-weight: 100;
   color: grey;
+}
+
+.two h2:hover {
+  color: black;
+  font-weight: 400;
 }
 
 
