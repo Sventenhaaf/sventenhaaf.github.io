@@ -85,8 +85,6 @@ a {
   margin-top:20px;
 }
 
-
-
 body {
   font-family: helvetica;
 }
@@ -96,7 +94,7 @@ body {
   text-align: center;
 }
 .one .br {
-  height: 150px;
+  height: 100px;
 }
 .one hr {
   max-width: 250px;

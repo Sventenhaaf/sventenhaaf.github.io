@@ -42,9 +42,9 @@ a {
 
 .text {
   color: white;
-  font-size: 0.9em;
+  font-size: 0.8em;
   position: absolute;
-  margin: 10px 10%;
+  margin: 0 10%;
   text-align: justify;
   font-weight: 100;
 }
@@ -53,15 +53,11 @@ a {
   font-style: italic;
 }
 .h1text {
-  padding: 5px 5px;
   color: white;
   font-weight: 400;
-  font-size: 1.1em;
+  font-size: 1em;
   text-align: center;
-  margin-top:20px;
 }
-
-
 
 body {
   font-family: helvetica;
@@ -72,22 +68,22 @@ body {
   text-align: center;
 }
 .one .br {
-  height: 0px;
+  height: 0;
 }
 .one hr {
   max-width: 250px;
 }
 .one h1 {
-  font-size: 1.4em;
+  font-size: 40px;
   font-weight: 400;
 }
 .one h3 {
-  font-size: 1em;
+  font-size: 32px;
   font-weight: 100;
   color: grey;
 }
 .one i {
-  margin: 10px;
+  margin: 0 14px;
 }
 .one a {
   color: rgb(70, 93, 109);
@@ -117,13 +113,11 @@ body {
 }
 
 .two h1 {
-  /*margin: 10px;*/
-  font-size: 1em;
+  font-size: 36px;
   font-weight: 400;
 }
 .two h2 {
-  /*margin: 10px;*/
-  font-size: 0.8em;
+  font-size: 28px;
   font-weight: 100;
   color: grey;
 }
