@@ -1,3 +1,9 @@
+#delay1, #delay2, #delay3, #delay4, #delay5, #delay6, #delay7, #delay8, #delay9,
+#delay10, #delay11, #delay12, #delay13, #delay14, #delay15, #delay16, #delay17, #delay18, #delay19,
+#delay20, #delay21, #delay22, #delay23, #delay24, #delay25, #delay26, #delay27, #delay28, #delay29 {
+  display: none;
+}
+
 .wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

@@ -1,3 +1,32 @@
+var post = document.getElementById("post");
+post.addEventListener("click", e => {
+  var imgEl = post.childNodes[1];
+  if (imgEl.src.split("/postnieuw.gif").length !== 2) {
+    [3].forEach(n => {
+      post.childNodes[n].style.display = "none"
+    })
+    imgEl.src = "./img/postnieuw.gif";
+  } else {
+    [3].forEach(n => {
+      post.childNodes[n].style.display = "block"
+    })
+    imgEl.src = "./img/post.png";
+  }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var svg = d3.select("svg")
 var colors = ["#FE6610", "#346164", "#111111", "#346164", "#00A8AF", "#346164", "#465D6D", "#346164", "#2C88AF", "#346164"]
 var indices = d3.range(0, colors.length);
@@ -82,28 +111,7 @@ d3.select("#section3")
 
 
 
-var post = document.getElementById("post");
-post.addEventListener("click", e => {
 
-
-  var imgEl = post.childNodes[1];
-  console.log(imgEl.src)
-  if (imgEl.src.split("/postnieuw.gif").length !== 2) {
-    [3].forEach(n => {
-      post.childNodes[n].style.display = "none"
-    })
-    imgEl.src = "./img/postnieuw.gif";
-  } else {
-    console.log("hoi??");
-    [3].forEach(n => {
-      post.childNodes[n].style.display = "block"
-    })
-    imgEl.src = "./img/post.png";
-  }
-
-
-
-})
 
 
 
